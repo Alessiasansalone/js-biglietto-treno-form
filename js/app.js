@@ -1,4 +1,4 @@
-console.log('hola')
+// console.log('hola')
 
 /* Il programma dovrà mostrare una form da compilare usando i corretti campi HTML di input con cui chiedere all’utente il numero di chilometri che vuole percorrere e l’età del passeggero.
 
@@ -38,17 +38,17 @@ formElement.addEventListener('submit', function (e) {
 
     // recuperiamo dati km
     const km = inputKmEvent.value
-    console.log(km)
+    // console.log(km)
 
     // recuperiamo dati age
     const age = inputAgeEvent.value
-    console.log(age)
+    // console.log(age)
 
     // dichiarazione variabili
     let prezzoBase = km * 0.21
-    console.log(prezzoBase)
+    // console.log(prezzoBase)
 
-    document.getElementById('prezzo-base').innerHTML = prezzoBase
+    document.getElementById('prezzo-base').innerHTML = prezzoBase.toFixed(2)
 
     // dichiariamo la variabile sconto
     let sconto
@@ -57,37 +57,37 @@ formElement.addEventListener('submit', function (e) {
         - assegnamo sconto minorenni */
     if (age < 18) {
         sconto = prezzoBase * 0.2
-        console.log(sconto)
+        // console.log(sconto)
     }
     /* ALTRIMENTI SE età > 65 
         - assegnamo sconto over 65 */
     else if (age > 65) {
         sconto = prezzoBase * 0.4
-        console.log(sconto)
+        // console.log(sconto)
     }
     // ALTRIMENTI sconto 0 
     else {
         sconto = 0
-        console.log(sconto)
+        // console.log(sconto)
     }
 
     // recuperiamo sconto
-    document.getElementById('sconto').innerHTML = sconto
+    document.getElementById('sconto').innerHTML = sconto.toFixed(2)
 
     // stampiamo in html prezzo base
     const stampaPrezzoBase = document.getElementById('prezzo-base')
-    console.log(stampaPrezzoBase)
+    // console.log(stampaPrezzoBase)
 
     // stampiamo in html sconto
     const stampaSconto = document.getElementById('sconto')
-    console.log(stampaSconto)
+    // console.log(stampaSconto)
 
     // calcoliamo prezzo totale
     let prezzoTotale = prezzoBase - sconto
-    console.log(prezzoTotale)
+    // console.log(prezzoTotale)
 
     // stampiamo in html prezzo totale
-    document.getElementById('prezzo-totale').innerHTML = prezzoTotale
+    document.getElementById('prezzo-totale').innerHTML = prezzoTotale.toFixed(2)
 })
 
 
