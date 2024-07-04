@@ -28,7 +28,6 @@ const inputKmEvent = document.getElementById('km')
 const inputAgeEvent = document.getElementById('age')
 // console.log(inputAgeEvent)
 
-
 // aggiungiamo evento al form
 formElement.addEventListener('submit', function (e) {
 
@@ -45,7 +44,26 @@ formElement.addEventListener('submit', function (e) {
     const age = inputAgeEvent.value
     console.log(age)
 
-    prezzoTotale = km * age
+    // dichiarazione variabili
+    let prezzoBase = km * 0.21
+    console.log(prezzoBase)
+
+    // dichiariamo la variabile sconto
+    let sconto
+
+    //assegnamo sconto minorenni
+    if (age < 18) {
+        sconto = prezzoBase * 0.2
+        console.log(sconto)
+    }
+    else if (age > 65) {
+        sconto = prezzoBase * 0.4
+        console.log(sconto)
+    }
+    else {
+        sconto = 0
+        console.log(sconto)
+    }
 })
 
 
