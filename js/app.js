@@ -46,7 +46,7 @@ formElement.addEventListener('submit', function (e) {
 
     // dichiarazione variabili
     let prezzoBase = km * 0.21
-    console.log(prezzoBase)
+    // console.log(prezzoBase)
 
     document.getElementById('prezzo-base').innerHTML = prezzoBase.toFixed(2)
 
@@ -89,17 +89,3 @@ formElement.addEventListener('submit', function (e) {
     // stampiamo in html prezzo totale
     document.getElementById('prezzo-totale').innerHTML = prezzoTotale.toFixed(2)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
