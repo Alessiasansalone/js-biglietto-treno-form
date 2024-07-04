@@ -28,6 +28,12 @@ const inputKmEvent = document.getElementById('km')
 const inputAgeEvent = document.getElementById('age')
 // console.log(inputAgeEvent)
 
+const prezzoBaseElement = document.getElementById('prezzo-base')
+
+const scontoElement = document.getElementById('sconto')
+
+const prezzoTotaleElement = document.getElementById('prezzo-totale')
+
 // aggiungiamo evento al form
 formElement.addEventListener('submit', function (e) {
 
@@ -37,49 +43,49 @@ formElement.addEventListener('submit', function (e) {
     // console.log('submit', e)
 
     // recuperiamo dati km
-    const km = inputKmEvent.value
+    const km = parseFloat(inputKmEvent.value) // number 
     // console.log(km)
 
     // recuperiamo dati age
-    const age = inputAgeEvent.value
+    const age = parseInt(inputAgeEvent.value) // number 
     // console.log(age)
 
     // dichiarazione variabili
-    let prezzoBase = km * 0.21
+    let prezzoBase = km * 0.21 // number 
     // console.log(prezzoBase)
 
-    document.getElementById('prezzo-base').innerHTML = prezzoBase.toFixed(2)
+    prezzoBaseElement.innerHTML = prezzoBase.toFixed(2)
 
     // dichiariamo la variabile sconto
-    let sconto
+    let sconto // undefined 
 
     /* SE età < 18 
         - assegnamo sconto minorenni */
     if (age < 18) {
-        sconto = prezzoBase * 0.2
+        sconto = prezzoBase * 0.2 // number
         // console.log(sconto)
     }
     /* ALTRIMENTI SE età > 65 
         - assegnamo sconto over 65 */
     else if (age > 65) {
-        sconto = prezzoBase * 0.4
+        sconto = prezzoBase * 0.4 // number
         // console.log(sconto)
     }
     // ALTRIMENTI sconto 0 
     else {
-        sconto = 0
+        sconto = 0 // number
         // console.log(sconto)
     }
 
     // recuperiamo sconto
-    document.getElementById('sconto').innerHTML = sconto.toFixed(2)
+    scontoElement.innerHTML = sconto.toFixed(2)
 
     // stampiamo in html prezzo base
-    const stampaPrezzoBase = document.getElementById('prezzo-base')
+    // const stampaPrezzoBase = document.getElementById('prezzo-base')
     // console.log(stampaPrezzoBase)
 
     // stampiamo in html sconto
-    const stampaSconto = document.getElementById('sconto')
+    // const stampaSconto = document.getElementById('sconto')
     // console.log(stampaSconto)
 
     // calcoliamo prezzo totale
@@ -87,5 +93,5 @@ formElement.addEventListener('submit', function (e) {
     // console.log(prezzoTotale)
 
     // stampiamo in html prezzo totale
-    document.getElementById('prezzo-totale').innerHTML = prezzoTotale.toFixed(2)
+    prezzoTotaleElement.innerHTML = prezzoTotale.toFixed(2)
 })
