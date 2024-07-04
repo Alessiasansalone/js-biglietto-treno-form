@@ -15,40 +15,61 @@
     <main>
         <section class="py-5">
 
+            <!-- Titolo -->
             <div class="container">
                 <h1>Calcola il prezzo del biglietto</h1>
             </div>
 
+            <!-- Container -->
             <div class="container">
+                <!-- Row -->
                 <form class="row g-3" id="form-calcolo">
 
+                    <!-- Col km-->
                     <div class="col-md-6">
+
                         <label for="km" class="form-label">Inserisci i km da percorrere</label>
+
                         <input type="text" class="form-control" id="km">
                     </div>
 
+                    <!-- Col età -->
                     <div class="col-md-6">
+
                         <label for="age" class="form-label">Inserisci la tua età</label>
+
                         <input type="text" class="form-control" id="age">
                     </div>
 
+                    <!-- Col calcola -->
                     <div class="col-12">
+
                         <button type="submit" class="btn btn-primary" id="calcola">Calcola</button>
                     </div>
 
+                    <!-- Col prezzo base -->
                     <div class="col-md-6">
-                        <label for="prezzoBase" class="form-label">Prezzo base</label>
-                        <input type="text" class="form-control" id="age">
+
+                        <label for="prezzo-base" class="form-label">Prezzo base</label>
+
+                        <div id="prezzo-base" style="height: 50%; border: 1px solid black;" class="border-success rounded">
+                        </div>
                     </div>
 
+                    <!-- Col sconto -->
                     <div class="col-md-6">
+
                         <label for="sconto" class="form-label">Sconto</label>
+
                         <input type="text" class="form-control" id="sconto">
                     </div>
 
+                    <!-- Col prezzo totale -->
                     <div class="col">
-                        <label for="prezzoTotale" class="form-label">Prezzo totale</label>
-                        <input type="text" class="form-control" id="prezzoTotale">
+
+                        <label for="prezzo-totale" class="form-label">Prezzo totale</label>
+                        
+                        <input type="text" class="form-control" id="prezzo-totale">
                     </div>
 
                 </form>

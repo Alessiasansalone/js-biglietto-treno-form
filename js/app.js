@@ -48,23 +48,36 @@ formElement.addEventListener('submit', function (e) {
     let prezzoBase = km * 0.21
     console.log(prezzoBase)
 
+    document.getElementById('prezzo-base').innerHTML = prezzoBase
+
     // dichiariamo la variabile sconto
     let sconto
 
-    //assegnamo sconto minorenni
+    /* SE età < 18 
+        - assegnamo sconto minorenni */
     if (age < 18) {
         sconto = prezzoBase * 0.2
         console.log(sconto)
     }
+    /* ALTRIMENTI SE età > 65 
+        - assegnamo sconto over 65 */
     else if (age > 65) {
         sconto = prezzoBase * 0.4
         console.log(sconto)
     }
+    // ALTRIMENTI sconto 0 
     else {
         sconto = 0
         console.log(sconto)
     }
+
+    const stampaPrezzoBase = document.getElementById('sconto')
+
+    console.log(stampaPrezzoBase)
 })
+
+
+
 
 
 
