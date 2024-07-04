@@ -20,18 +20,21 @@ Questo richiederà un minimo di ricerca. */
 const formElement = document.getElementById('form-calcolo')
 // console.log(formElement)
 
-// recuperiamo input km
+// recuperiamo input km dal DOM
 const inputKmEvent = document.getElementById('km')
 // console.log(inputKmEvent)
 
-// recuperiamo input age
+// recuperiamo input age dal DOM
 const inputAgeEvent = document.getElementById('age')
 // console.log(inputAgeEvent)
 
+// recuperiamo prezzo base dal DOM
 const prezzoBaseElement = document.getElementById('prezzo-base')
 
+// recuperiamo sconto dal DOM
 const scontoElement = document.getElementById('sconto')
 
+//recuperiamo prezzo totale dal DOM
 const prezzoTotaleElement = document.getElementById('prezzo-totale')
 
 // aggiungiamo evento al form
