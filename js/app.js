@@ -71,10 +71,26 @@ formElement.addEventListener('submit', function (e) {
         console.log(sconto)
     }
 
-    const stampaPrezzoBase = document.getElementById('sconto')
+    // recuperiamo sconto
+    document.getElementById('sconto').innerHTML = sconto
 
+    // stampiamo in html prezzo base
+    const stampaPrezzoBase = document.getElementById('prezzo-base')
     console.log(stampaPrezzoBase)
+
+    // stampiamo in html sconto
+    const stampaSconto = document.getElementById('sconto')
+    console.log(stampaSconto)
+
+    // calcoliamo prezzo totale
+    let prezzoTotale = prezzoBase - sconto
+    console.log(prezzoTotale)
+
+    // stampiamo in html prezzo totale
+    document.getElementById('prezzo-totale').innerHTML = prezzoTotale
 })
+
+
 
 
 
