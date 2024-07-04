@@ -16,61 +16,61 @@
         <section class="py-5">
 
             <!-- Titolo -->
-            <div class="container">
+            <div class="container d-flex justify-content-center">
                 <h1>Calcola il prezzo del biglietto</h1>
             </div>
 
             <!-- Container -->
             <div class="container">
                 <!-- Row -->
-                <form class="row g-3" id="form-calcolo">
+                <form class="row g-3 py-5" id="form-calcolo">
 
                     <!-- Col km-->
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
 
                         <label for="km" class="form-label">Inserisci i km da percorrere</label>
 
-                        <input type="text" class="form-control" id="km">
+                        <input type="text" class="form-control text-center" id="km">
                     </div>
 
                     <!-- Col età -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
 
                         <label for="age" class="form-label">Inserisci la tua età</label>
 
-                        <input type="text" class="form-control" id="age">
+                        <input type="text" class="form-control text-center" id="age">
                     </div>
 
                     <!-- Col calcola -->
-                    <div class="col-12">
+                    <div class="col-12 d-flex justify-content-center">
 
                         <button type="submit" class="btn btn-primary" id="calcola">Calcola</button>
                     </div>
 
                     <!-- Col prezzo base -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
 
                         <label for="prezzo-base" class="form-label">Prezzo base</label>
 
-                        <div id="prezzo-base" style="height: 40px; border: 1px solid black;" class="border-success rounded p-2">
+                        <div id="prezzo-base" style="height: 40px; width: 100% ;border: 1px solid rgb(37, 37, 37);" class="rounded p-2 text-center">
                         </div>
                     </div>
 
                     <!-- Col sconto -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
 
                         <label for="sconto" class="form-label">Sconto</label>
 
-                        <div id="sconto" style="height: 40px; border: 1px solid black;" class="border-success rounded p-2">
+                        <div id="sconto" style="height: 40px; width: 100%; border: 1px solid rgb(37, 37, 37);" class="rounded p-2 text-center">
                         </div>
                     </div>
 
                     <!-- Col prezzo totale -->
-                    <div class="col-3 ms-auto me-auto">
+                    <div class="col-3 ms-auto me-auto d-flex flex-column align-items-center">
 
-                        <label for="prezzo-totale" class="form-label">Prezzo totale</label>
+                        <label for="prezzo-totale" class="form-label"><strong>Prezzo totale</strong></label>
 
-                        <div id="prezzo-totale" style="height: 40px; border: 1px solid black;" class="border-success rounded p-2">
+                        <div id="prezzo-totale" style="height: 40px; width: 162px; border: 1px solid" class="border-success rounded p-2 bg-success bg-opacity-25 text-center">
                         </div>
                     </div>
 
